@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  runnningregist:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: runnning_regist
+      Description: >-
+        A simple backend (read/write to DynamoDB) with a RESTful API endpoint
+        using Amazon API Gateway.
+      Handler: lambda_function.lambda_handler
+      MemorySize: 512
+      Role: 'arn:aws:iam::578606130519:role/role-lambdaexec'
+      Runtime: python3.7
+      Timeout: 10
